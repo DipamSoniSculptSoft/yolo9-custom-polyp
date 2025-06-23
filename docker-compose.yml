@@ -11,7 +11,7 @@ services:
               capabilities: [gpu]
 
   yolo_pipeline:
-    build: .
+    # build: .
     image: dipamsoni361/yolo_training_pipeline:latest
     deploy:
       resources:

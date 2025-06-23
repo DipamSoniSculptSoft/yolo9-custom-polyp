@@ -1,0 +1,7 @@
+PyYaml
+numpy
+pandas
+ultralytics
+opencv-python
+scikit-learn
+tqdm

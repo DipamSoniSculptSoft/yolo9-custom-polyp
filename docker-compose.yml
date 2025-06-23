@@ -1,0 +1,31 @@
+services:
+  gpu_services:
+    image: nvidia/cuda:12.9.0-base-ubuntu22.04
+    command: nvidia-smi
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  yolo_pipeline:
+    build: .
+    image: dipamsoni361/yolo_training_pipeline:latest
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+    volumes:
+      - ./src:/app/src
+      - ./dataset:/app/dataset
+      - ./yolo-artifacts:/app/yolo-artifacts
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    depends_on:
+      - gpu_services

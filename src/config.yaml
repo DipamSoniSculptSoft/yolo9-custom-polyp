@@ -1,0 +1,13 @@
+# Module Details
+
+# Hyper Parameters
+epochs: 90
+batch_size: 12
+imgsz: 512
+patience: 0
+#
+conf: 0.5
+iou: 0.5
+
+# Path Details
+output_path: ../yolov9_polyp_512_dataset/

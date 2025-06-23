@@ -1,0 +1,9 @@
+FROM dipamsoni361/yolo_training_pipeline:latest
+
+# COPY the required directories to the image 
+COPY output/ /app/output
+COPY yolo-artifacts /app/yolo-artifacts
+
+WORKDIR /app/src
+
+

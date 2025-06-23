@@ -1,0 +1,12 @@
+venv/
+.venv/
+output/
+yolo-artifacts/yolov9-*-*-dataset/train
+yolo-artifacts/yolov9-*-*-dataset/val
+yolo-artifacts/yolov9-*-*-dataset/data.yaml
+
+src/*.pt
+**/__pycache__
+**.py[cod]
+yolo-artifacts/yolov9-512-polyp-dataset/results
+dataset

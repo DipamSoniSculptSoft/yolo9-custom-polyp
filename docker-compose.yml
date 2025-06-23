@@ -23,7 +23,7 @@ services:
 
     volumes:
       - ./src:/app/src
-      - ./dataset:/app/dataset
+      # - ./dataset:/app/dataset
       - ./yolo-artifacts:/app/yolo-artifacts
     environment:
       - CUDA_VISIBLE_DEVICES=0

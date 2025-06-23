@@ -14,7 +14,7 @@ WORKDIR /app/src
 
 # 
 COPY dataset /app/dataset
-COPY src/requirements.txt . 
+COPY requirements.txt . 
 RUN python3.10 -m pip install --no-cache-dir -r requirements.txt
 
 COPY src/ .

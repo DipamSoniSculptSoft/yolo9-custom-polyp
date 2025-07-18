@@ -19,5 +19,6 @@ RUN python3.10 -m pip install --no-cache-dir -r requirements.txt
 
 COPY src/ .
 
-CMD ["python3.10", "trainer.py"]
+# CMD ["python3.10", "trainer.py"]
+CMD ["python3.10", "pt_to_engine.py"]
 

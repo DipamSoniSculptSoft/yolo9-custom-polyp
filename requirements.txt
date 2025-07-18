@@ -6,3 +6,6 @@ opencv-python
 scikit-learn
 tqdm
 streamlit
+tensorrt
+tensorrt-lean
+tensorrt-dispatch

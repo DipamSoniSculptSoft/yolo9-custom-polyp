@@ -1,13 +1,14 @@
 FROM dipamsoni361/yolo_training_pipeline:200_epoch
 
 # Install prerequisites and add CUDA keyring (already in base image, but ensuring)
-RUN apt-get update && apt-get install -y software-properties-common gnupg wget
+RUN apt-get update && apt-get install -y software-properties-common gnupg wget && apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # # Install TensorRT core libraries (system libs required for Python bindings)
 # RUN apt-get update && apt-get install -y tensorrt tensorrt-dev
 
 # Install Python bindings via pip (this pulls the official tensorrt package from PyPI)
-RUN python3.10 -m pip install tensorrt  
+RUN python3.10 -m pip install --no-cache-dir tensorrt  
 
 # # Upgrade ultralytics for latest YOLO-TensorRT integration
 # RUN python3.10 -m pip install --upgrade ultralytics

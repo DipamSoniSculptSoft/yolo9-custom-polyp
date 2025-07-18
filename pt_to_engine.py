@@ -8,7 +8,7 @@ data_yaml_path = os.path.join(PROJECT_ROOT, 'yolo-artifacts', 'yolov9-512-polyp-
 model.export(
     format='engine',      # TensorRT format
     dynamic=False,         # Enable dynamic shapes (batch and image sizes)
-    batch=2,              # Max batch size (adjust as needed for your GPU memory)
+    batch=8,              # Max batch size (adjust as needed for your GPU memory)
     imgsz=512,            # Base image size (can be dynamic around this)
     half=True,            # FP16 for speed
     workspace=4,          # Workspace in GiB for optimizations

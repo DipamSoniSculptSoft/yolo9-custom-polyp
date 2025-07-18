@@ -2,7 +2,7 @@ import os
 from ultralytics import YOLO
 from src.constants import *
 
-model_pt_path = os.path.join(YOLO_RESULTS, f"{CONFIG.get('epochs', 200)}_epochs-2", "weights", "best.pt")
+model_pt_path = os.path.join(YOLO_RESULTS, f"200_epochs-2", "weights", "best.pt")
 model = YOLO(model_pt_path)
 data_yaml_path = os.path.join(PROJECT_ROOT, 'yolo-artifacts', 'yolov9-512-polyp-dataset', 'data.yaml')
 model.export(
@@ -17,7 +17,7 @@ model.export(
 )
 
 # Load the trained YOLO model at startup
-model_path = os.path.join(YOLO_RESULTS, f"{CONFIG.get('epochs', 200)}_epochs-2", "weights", "best.engine")
+model_path = os.path.join(YOLO_RESULTS, f"200_epochs-2", "weights", "best.engine")
 print(f"Exported to {model_path} with dynamic batch (1-16) and image sizes (320-640).")
 model = YOLO(model_path)
 print("Model loaded successfully.")

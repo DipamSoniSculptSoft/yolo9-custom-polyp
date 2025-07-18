@@ -1,4 +1,5 @@
-FROM dipamsoni361/yolo_training_pipeline:latest
+# FROM dipamsoni361/yolo_training_pipeline:latest
+FROM dipamsoni361/yolo_training_pipeline:200_epoch
 
 # COPY the required directories to the image 
 # COPY output/ /app/output
